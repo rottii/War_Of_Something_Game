@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a365e4580c87ce24b8365640331d47d7, type: 3}
+  m_Name: ArcherData
+  m_EditorClassIdentifier: 
+  soldierName: Archer
+  icon: {fileID: 5731584507761909605, guid: 1e30d05096ce0bb4f97ddde67a608eaa, type: 3}
+  prefab: {fileID: 2133658030035706636, guid: 43f8768a81d2cf544a4a6a26b7c24aa9, type: 3}
+  timeToSpawn: 1
+  unitStats:
+  - statID: unit_health
+    displayName: Health
+    baseValue: 100
+    statIncreasePerLevel: 15
+  - statID: unit_speed
+    displayName: Speed
+    baseValue: 0.5
+    statIncreasePerLevel: 0
+  - statID: unit_damage
+    displayName: Damage
+    baseValue: 20
+    statIncreasePerLevel: 10
