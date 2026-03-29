@@ -1581,7 +1581,7 @@ GameObject:
   - component: {fileID: 506261806}
   - component: {fileID: 506261807}
   m_Layer: 5
-  m_Name: Upgrades Layout
+  m_Name: Upgrades Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,7 +1604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 82}
+  m_AnchoredPosition: {x: -23, y: 82}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506261807
@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dae5de7f18b88b4281ae61b9fe37ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpgradePanel: {fileID: 0}
+  UpgradePanelUI: {fileID: 1557474437}
 --- !u!224 &640651845 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6894469698816998144, guid: d7b1d7ff9245c9a408d1d983f6ab923c, type: 3}
@@ -4250,13 +4250,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1557474438}
   - component: {fileID: 1557474440}
+  - component: {fileID: 1557474441}
   m_Layer: 5
   m_Name: Upgrade Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1557474438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4286,6 +4287,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557474437}
   m_CullTransparentMesh: 1
+--- !u!114 &1557474441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557474437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc890932c59b2cc45b9a2387c0169107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: {fileID: 336097353}
+  unitImage: {fileID: 671428404}
+  upgradablesContainer: {fileID: 506261806}
+  upgradeSlot: {fileID: 3826905304997221046, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
 --- !u!224 &1567844268 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6894469698816998144, guid: d7b1d7ff9245c9a408d1d983f6ab923c, type: 3}
@@ -5502,7 +5519,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3826905304997221046, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_Name
-      value: 'Upgrade '
+      value: Upgrade Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910025268770133319, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 351
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_Pivot.x
@@ -5518,7 +5539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_AnchorMin.x
@@ -5526,7 +5547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5566,11 +5587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 7116405649097697708, guid: 56817f361b0e17843ba7e47aa436edfc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
