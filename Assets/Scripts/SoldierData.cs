@@ -5,11 +5,13 @@ using UnityEngine;
 public class UpgradableUnitStats
 {
     //health, speed, damage etc.
-    public string statID;
+    public string statID;//used for saving current level of stat
     public string displayName;
     public float baseValue;
+    public float baseCost;
 
     public float statIncreasePerLevel;
+    public float costIncreasePerLevel;
 }
 
 [CreateAssetMenu(fileName = "NewSoldier", menuName = "Soldier/Soldier Data")]

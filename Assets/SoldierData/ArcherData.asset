@@ -17,15 +17,21 @@ MonoBehaviour:
   prefab: {fileID: 2133658030035706636, guid: 43f8768a81d2cf544a4a6a26b7c24aa9, type: 3}
   timeToSpawn: 1
   unitStats:
-  - statID: unit_health
+  - statID: _health
     displayName: Health
     baseValue: 100
+    baseCost: 100
     statIncreasePerLevel: 15
-  - statID: unit_speed
+    costIncreasePerLevel: 100
+  - statID: _speed
     displayName: Speed
     baseValue: 0.5
-    statIncreasePerLevel: 0
-  - statID: unit_damage
+    baseCost: 100
+    statIncreasePerLevel: 0.05
+    costIncreasePerLevel: 0
+  - statID: _damage
     displayName: Damage
     baseValue: 20
+    baseCost: 100
     statIncreasePerLevel: 10
+    costIncreasePerLevel: 5

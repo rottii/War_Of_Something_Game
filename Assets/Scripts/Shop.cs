@@ -4,7 +4,7 @@ public class Shop : MonoBehaviour
 {
     public static Shop Instance { get; private set; }
 
-    public GameObject UpgradePanel;
+    public GameObject UpgradePanelUI;
 
     void Awake()
     {
@@ -18,12 +18,10 @@ public class Shop : MonoBehaviour
 
     public void OpenUpgradeTab(SoldierData unit)
     {
-        UpgradePanel.SetActive(true);
-    }
-
-    public void UpgradeUnit(SoldierData unit)
-    {
-
+        UpgradePanelUI.SetActive(true);
+        UpgradePanel upgradePanelScript = UpgradePanelUI.GetComponent<UpgradePanel>();
+        upgradePanelScript.SetUpPanel(unit);
+        //Upgrading happens in UpgradeSlot.cs    
     }
 
     public void SelectUnit(SoldierData unit)
